@@ -8,8 +8,9 @@ def main():
                  data_input.read_file_pandas("input.csv")]
     for i in range(len(read_data)):
         data_output.write_text_console(read_data[i])
-        data_output.write_file_python(str(read_data[i]), f"output{i}.csv")
+        data_output.write_file_python(str(read_data[i]), f"output_python{i}.csv")
 
+    data_output.write_file_pandas(read_data[2], f"output_panda.csv")
 
 if __name__ == "__main__":
     main()
